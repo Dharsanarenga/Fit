@@ -1,99 +1,95 @@
+FlipFit - Java Swing Fitness Tracker
+FlipFit is a simple desktop-based fitness tracking application built using Core Java and Java Swing for GUI. It allows users to:
 
-# FlipFit 🏋️‍♂️
+1.Register and log user details
 
-FlipFit is a Java-based fitness tracking system built for the **Flipkart GRiD 7.0 Case Study Round**.  
-It allows users to register, log workouts, track calories burned, and monitor fitness progress through ratings.
+2.Log daily workout details
 
----
+3.Track calories burnt
 
-## 🚀 Features
+4.Rate daily and weekly progress
 
-- ✅ User Registration  
-- 📝 Workout Logging  
-- 🔥 Calorie Burn Tracking  
-- 📈 Progress Rating System  
-- 🗂️ Data Persistence via File Writing  
-- 🧠 Smart Input Validation and Error Handling  
-- 🎯 Designed with modular services (Login, Workout Logging, File Handling)
+5.Export reports to a text file
 
----
+🔧 Technologies Used
 
-## 🧩 Project Structure
+Java (Core Java)
 
-```
+Java Swing (for GUI)
+
+File I/O (for saving logs)
+
+OOPs Concepts (Encapsulation, Inheritance)
+
+📁 Project Structure
+
 FlipFit/
-│
 ├── models/
-│   ├── User.java          # Stores user profile information
-│   └── Workout.java       # Holds workout and calories data
-│
+│   └── User.java
 ├── services/
-│   ├── Login.java         # Handles user login & registration
-│   ├── LogWorkout.java    # Records workout details
-│   └── Generatefile.java  # Writes report to file
-│
-├── report.txt             # Output report (generated)
-├── Main.java              # Entry point (if applicable)
-└── README.md              # Project overview
-```
+│   ├── LogWorkout.java
+│   └── GenerateFile.java
+├── ui/
+│   └── FlipFitGUI.java
+├── report.txt
+└── README.md
 
----
+🖥️ GUI Features (Java Swing)
 
-## 💡 How It Works
+Register Tab
 
-1. **Register or Log in**: Users can register using their name and email ID.  
-2. **Log Workouts**: Each session logs the type of workout and calories burned.  
-3. **Track Progress**: Based on calorie goals, FlipFit rates the user’s performance.  
-4. **Generate Report**: Data is written to a text file (`report.txt`) for reference.
+Fields: Username, Age, Gender, Weight, Height
 
----
+Button: Register
 
-## 🛠️ Technologies Used
+Saves user details to memory for the session
 
-- Java (Core Java, OOP)  
-- File Handling (`BufferedWriter`)  
-- Collections (`HashMap`, `ArrayList`)  
-- Exception Handling
+Workout Log Tab
 
----
+Fields: Activity Name, Duration (minutes), Intensity
 
-## 🧪 Example Usage
+Button: Log Workout
 
-```
-Enter name: John
-Enter email: john@example.com
+Updates calorie data based on predefined logic
 
-How many days did you work out? 3
-Day 1: Pushups - 120 calories
-Day 2: Running - 300 calories
-Day 3: Cycling - 250 calories
+Report Tab
 
-Total Calories Burned: 670
-Progress Rating: ⭐⭐⭐⭐ (Good)
-```
+Button: Generate Report
 
----
+Exports the weekly summary and calories to report.txt
 
-## 📂 Output
+🚀 How to Run
 
-- All user data and performance stats are stored in `report.txt`.  
-- Can be extended to use a database or GUI in future.
+Clone the repository
 
----
+git clone https://github.com/yourusername/flipfit.git
+cd flipfit
 
-## 📝 Notes
+Compile the files
 
- 
-- Can be extended with **Java Swing GUI**, **Spring Boot**, or **REST API** support.
+javac models/*.java services/*.java ui/*.java
 
----
+Run the GUI
 
-## 🙋 Author
+java ui.FlipFitGUI
 
-Made with by Dharsana R
+Make sure report.txt is in the root directory or it will be auto-generated.
 
----
+📌 Future Enhancements
 
-## 📜 License
+Add user authentication
 
-This project is open-source and free to use.
+Store user data in files or a database
+
+Generate graphical reports
+
+Integrate ML-based recommendations
+
+
+
+👨‍💻 Author
+
+Dharsana R - B.Tech CSE Student @ SASTRA University
+
+
+
